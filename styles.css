@@ -1,0 +1,313 @@
+  .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-size: 60px !important; 
+      color: #1bbbff;
+      font-variation-settings: 'FILL' 1, 'wght' 600, 'GRAD' 0, 'opsz' 100;
+      margin: 12px 0px 0px 0px;
+}
+ 
+
+
+/* Estilos generales del cuerpo y HTML */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #ffffff;
+    color: #212529; /* Color de texto principal más oscuro */
+    line-height: 1.6;
+}
+
+/* Contenedor principal para centrar el contenido */
+.contenedor-principal {
+    max-width: 960px;
+    margin: 40px auto; /* Margen superior/inferior para espaciar de los bordes de la ventana */
+    padding: 0 20px; /* Padding lateral para que el contenido no toque los bordes en pantallas pequeñas */
+}
+
+/* Estilos generales para las secciones */
+.seccion {
+    margin-bottom: 40px;
+}
+
+.seccion p {
+    font-size: 16px;
+    color: #495057;
+    margin-bottom: 20px;
+}
+
+/* Títulos Principales y de Sección con línea decorativa */
+h1.titulo-principal { /* "Hola, soy Diego" */
+    font-size: 36px;
+    color: #0055c5; /* Negro suave */
+    margin-bottom: 15px; /* Espacio general */
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px; /* Espacio para la línea */
+}
+
+h1.titulo-principal::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 70px; /* Longitud de la línea */
+    height: 3px; /* Grosor de la línea */
+    background-color: #1bbbff; /* Color azul */
+}
+
+.seccion > h2.titulo-seccion { /* Títulos "Skills", "Facts" */
+    font-size: 28px;
+    color: #0055c5; 
+    margin-bottom: 20px; /* Espacio general */
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px; /* Espacio para la línea */
+}
+
+.seccion > h2.titulo-seccion::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px; /* Longitud de la línea */
+    height: 3px; /* Grosor de la línea */
+    background-color: #1bbbff; /* Color azul */
+}
+
+/* Estilos de la sección de Introducción */
+.introduccion .saludo-contenedor {
+    margin-bottom: 30px;
+}
+.introduccion .saludo-contenedor p { /* Párrafo debajo de "Hola, soy Diego" */
+    margin-top: 20px; /* Espacio después de la línea del h1 */
+}
+
+
+.info-desarrollador-flex {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.columna-foto {
+    flex-basis: 200px;
+    flex-shrink: 0;
+}
+
+.foto-perfil {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.columna-detalles {
+    flex-grow: 1;
+}
+
+.columna-detalles h2.titulo-rol { /* "FullStack Developer." */
+    font-size: 24px;
+    color: #0055c5; /* Azul */
+    margin-top: 0;
+    margin-bottom: 10px;
+    position: static; /* Asegurar que no herede ::after de h2.titulo-seccion */
+    padding-bottom: 0; /* Sin padding para línea */
+    display: block;
+}
+.columna-detalles h2.titulo-rol::after { /* Explícitamente quitar la línea */
+    display: none;
+}
+
+
+.parrafo-desarrollador {
+    font-size: 15px;
+    color: #495057;
+    margin-bottom: 15px;
+}
+
+.lista-detalles {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px 20px;
+}
+
+.lista-detalles li {
+    font-size: 15px;
+    color: #495057;
+}
+
+.lista-detalles strong {
+    color: #212529;
+}
+
+.chevron {
+    color: #1bbbff;
+    margin-right: 8px;
+    font-weight: lighter;
+    font-style: oblique;
+}
+
+/* Estilos de la sección de Habilidades */
+.seccion.habilidades {
+    background-color: #f8f9fa; /* Fondo gris claro para la sección de skills */
+    padding: 30px; /* Padding interno para la sección */
+    border-radius: 8px; /* Bordes redondeados */
+    /* El margin-bottom ya está en .seccion */
+}
+
+.seccion.habilidades .titulo-seccion {
+    margin-bottom: 15px; /* Ajustar margen del título dentro de esta sección */
+}
+.seccion.habilidades > p { /* Párrafo descriptivo de skills */
+    margin-top: 20px; /* Espacio después de la línea del título */
+    margin-bottom: 25px;
+}
+
+
+.contenedor-habilidades {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 30px;
+}
+
+.habilidad {
+    margin-bottom: 15px;
+}
+
+.info-habilidad {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #343a40;
+    font-weight: bold;
+}
+
+.nombre-habilidad {
+    text-transform: uppercase;
+}
+
+.porcentaje-habilidad {
+    color: #495057;
+}
+
+.barra-progreso-externa {
+    background-color: #e9ecef;
+    border-radius: 4px;
+    height: 12px;
+    overflow: hidden;
+}
+
+.barra-progreso-interna {
+    background-color: #0d6efd;
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.6s ease;
+}
+
+/* Estilos de la sección de Hechos */
+.seccion.hechos .titulo-seccion {
+    margin-bottom: 15px; /* Ajustar margen del título */
+}
+.seccion.hechos > p { /* Párrafo descriptivo de facts */
+    margin-top: 20px; /* Espacio después de la línea del título */
+    margin-bottom: 25px;
+}
+
+.contenedor-hechos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+.hecho {
+    padding: 15px 10px; /* Ajustar padding para mejor distribución */
+    display:flex;
+}
+
+
+
+.numero-hecho {
+    font-size: 50px;
+    font-weight: bold;
+    color: #1bbbff;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.hecho p {
+    font-size: 14px;
+    color: #495057;
+    margin-bottom: 0;
+    line-height: 1.4;
+    
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .info-desarrollador-flex {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .columna-foto {
+        margin-bottom: 20px;
+        width: 150px;
+        flex-basis: auto;
+    }
+    .columna-detalles h2.titulo-rol {
+        text-align: center;
+    }
+
+    .lista-detalles {
+        grid-template-columns: 1fr;
+        text-align: left; /* Para que el texto dentro de los li no se centre */
+    }
+    .lista-detalles li {
+         /* El texto dentro del li se alinea por defecto a la izquierda */
+    }
+
+
+    .contenedor-habilidades {
+        grid-template-columns: 1fr;
+    }
+
+    .contenedor-hechos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .hecho {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedor-principal {
+        padding: 0 15px; /* Menos padding en móviles muy pequeños */
+    }
+    .seccion.habilidades {
+        padding: 20px; /* Ajustar padding para móviles */
+    }
+
+    h1.titulo-principal {
+        font-size: 30px;
+    }
+    .seccion > h2.titulo-seccion {
+        font-size: 24px;
+    }
+    .columna-detalles h2.titulo-rol {
+        font-size: 20px;
+    }
+
+    .contenedor-hechos {
+        grid-template-columns: 1fr;
+    }
+    .lista-detalles {
+        gap: 8px 15px; /* Reducir gap en móviles */
+    }
+}
