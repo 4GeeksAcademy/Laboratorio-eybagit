@@ -12,3 +12,14 @@
 .btn:hover {
   background-color: #005f78;
 }
+
+.al-final {
+  text-align: center;
+  background: #111;
+  color: white;
+  padding: 10px 0;
+}
+
+body{
+    padding: 10px;
+}
